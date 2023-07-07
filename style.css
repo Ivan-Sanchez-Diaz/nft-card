@@ -1,0 +1,134 @@
+:root {
+    --clr-primary: hsl(215, 51%, 70%);
+    --clr-secondary: hsl(178, 100%, 50%);
+
+    --clr-neutral-hsl-200: 0, 0%, 100%;
+    --clr-neutral-200: hsl(0, 0%, 100%);
+    --clr-neutral-300: hsl(215, 32%, 27%);
+    --clr-neutral-400: hsl(216, 50%, 16%);
+    --clr-neutral-500: hsl(217, 54%, 11%);
+    --clr-neutral-600: hsla(218, 52%, 4%, 0.496);
+
+    --fs-200: 1.125rem;
+    --ff-default: 'Outfit', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--ff-default);
+    background: var(--clr-neutral-500);
+    color: hsl(var(--clr-neutral-hsl-200), .5);
+
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.flex-group {
+    display: flex;
+    gap: .5rem;
+}
+
+.flex-space {
+    justify-content: space-between;
+}
+
+
+.card {
+    background: var(--clr-neutral-400);
+    margin: 1rem;
+
+    max-width: 30rem;
+    display: grid;
+    gap: 1rem;
+
+    padding-inline: 1rem;
+    padding-block: 2rem;
+
+    border-radius: 16px;
+
+    box-shadow: 0px 0px 30px 15px var(--clr-neutral-600);
+}
+
+@media (min-width: 600px) {
+    .card {
+        padding: 2rem;
+    }
+}
+
+.card-img {
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--clr-neutral-200);
+}
+
+.card-description {
+    font-weight: 300;
+    font-size: 1.35rem;
+    color: hsl(var(--clr-neutral-hsl-200), .5);
+}
+
+.card-price-time {
+    padding-bottom: 1.7rem;
+    border-bottom: 1px solid var(--clr-neutral-300);
+}
+
+.card-price p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--clr-secondary);
+}
+
+.card-time p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.card-price img {
+    align-self: center;
+}
+
+.card-time img {
+    align-self: center;
+}
+
+.card-footer {
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-avatar {
+    max-width: 3rem;
+    border: 3px solid var(--clr-neutral-200);
+    border-radius: 50%;
+}
+
+.card-footer p {
+    font-size: 1.25rem;
+}
+
+.card-footer p span {
+    color: var(--clr-neutral-200);
+    font-weight: 600;
+}
